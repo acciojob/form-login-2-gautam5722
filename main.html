@@ -1,16 +1,51 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="form">
+        <label for="firstName">First Name : </label>
+        <input type="text" name="firstName" id="fname">
+        <br><br>
 
+        <label for="lastName">Last Name : </label>
+        <input type="text" name="lastName" id="lname">
+        <br><br>
+
+        <label for="phoneNumber">Phone Number : </label>
+        <input type="number" name="phoneNumber" id="phoneNumber">
+        <br><br>
+
+        <label for="email">Email ID : </label>
+        <input type="email" name="email" id="email">
+        <br><br>
+
+        <button id="btn">Submit</button>
+    </div>
+
+    <script>
+        function alertMsg () {
+
+            let fname = document.getElementById("fname").value;
+            let lastname = document.getElementById("lname").value;
+            let phoneNumber = document.getElementById("phoneNumber").value;
+            let email = document.getElementById("email").value;
+
+            let msg = `First Name: ${fname} Last Name: ${lastname} Phone Number: ${phoneNumber} Email ID: ${email}`;
+
+            alert(msg);
+
+        }
+
+        document.getElementById("btn").addEventListener("click", alertMsg);
+
+        
+    </script>
 </body>
 
 </html>
